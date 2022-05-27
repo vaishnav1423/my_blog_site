@@ -20,7 +20,7 @@ def home(request):
     context={
         'posts':posts
     }  # To Pass variable as Context to Template
-    return render(request,'home.html',context)
+    return render(request,'blog/home.html',context)
 
 def about(request):
-    return render(request,'about.html',{'title': "About"})
+    return render(request,'blog/about.html',{'title': "About"})
