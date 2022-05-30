@@ -9,8 +9,8 @@ def register(request):
         if form.is_valid():                     # is_valid will validate the form entries and return true if valid
             form.save()                         #This will actually create the user 
             username=form.cleaned_data.get('username')
-            messages.success(request,f'Account Created for user {username}!!')  #sends success message to next page
-            return redirect('blog_db-home')     # redirect back to home page 
+            messages.success(request,f'{username}!!! Your account has been created. You are now able to login!!')  #sends success message to next page
+            return redirect('login')     # redirect back to home page 
     else:
         form=UserCreationForm()                 #if form is empty and loaded for first time
 
